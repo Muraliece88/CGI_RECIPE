@@ -1,0 +1,14 @@
+{
+  "recipieName": "briyani",
+  "suitableFor": 1,
+  "veg": false,
+  "ingredients":[{
+    "itemName":"rice"
+  },
+    {
+      "itemName":"chicken"
+    }
+  ],
+
+  "instructions": "cooked with rice chicken and masala"
+}
