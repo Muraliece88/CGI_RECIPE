@@ -10,6 +10,7 @@ import java.util.Set;
 
 @Data
 public class RecipieDTO {
+    private Long Id;
     @JsonProperty
     @NotBlank(message = "Please provide fieldname: recipieName should be provided or check the property")
     private String recipieName;

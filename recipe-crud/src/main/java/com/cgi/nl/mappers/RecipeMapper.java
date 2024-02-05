@@ -14,8 +14,8 @@ public interface RecipeMapper
     RecipeMapper INSTANCE = Mappers.getMapper(RecipeMapper.class);
     Recipe mapRecipeResponse(RecipieDTO recipieDTO);
     Recipe searchDtoEntity(RecipieSearchDTO recipieSearchDTO);
-    @Mapping(target = "id", source = "Id")
-    Recipe mapRecipe(RecipieDTO recipieDTO, Long Id);
+
+    Recipe mapRecipe(RecipieDTO recipieDTO);
 
 
     default List<ResponseDTO> entityToResponse(List<Recipe> recipes) {

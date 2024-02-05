@@ -50,9 +50,9 @@ public class ServiceImpl implements RecipeService{
         Recipe recipe= repo.findById(id).
                 orElseThrow(() -> new ResourceNotFoundException("Recepie with id: " + id+"do not exists"));
         log.info("Recipe exists with ID and hence updating");
-
-       Recipe updatedRecipe =repo.save(mappers.INSTANCE.mapRecipe(recipieDto,recipe.getId()));
-
+        recipieDto.setId(recipe.getId());
+       Recipe updatedRecipe =mappers.INSTANCE.mapRecipe(recipieDto);
+       repo.save(updatedRecipe);
         return updatedRecipe.getId();
 
     }
